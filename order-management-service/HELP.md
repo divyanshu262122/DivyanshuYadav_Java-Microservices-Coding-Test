@@ -1,0 +1,3 @@
+Approach Explanation -:
+
+The solution follows a clean layered architecture (Controller → Service → Repository) with a ConcurrentHashMap for thread-safe in-memory storage. DTOs are used to decouple the API contract from the domain model, and all business logic — including status transition validation — lives exclusively in the Service layer. Global exception handling via @ControllerAdvice returns RFC 7807-compliant error responses with appropriate HTTP status codes (400, 404, 409, 422).
